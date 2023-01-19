@@ -1,0 +1,3 @@
+[submodule "cle"]
+	path = cle
+	url = git@github.com:stash-196/cle.git
