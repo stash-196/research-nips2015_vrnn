@@ -1,3 +1,4 @@
+from __future__ import print_function
 import ipdb
 import numpy as np
 import theano
@@ -47,11 +48,11 @@ def main(args):
     lr = float(args['lr'])
     debug = int(args['debug'])
 
-    print "trial no. %d" % trial
-    print "batch size %d" % batch_size
-    print "learning rate %f" % lr
-    print "saving pkl file '%s'" % pkl_name
-    print "to the save path '%s'" % save_path
+    print("trial no. %d" % trial)
+    print("batch size %d" % batch_size)
+    print("learning rate %f" % lr)
+    print("saving pkl file '%s'" % pkl_name)
+    print("to the save path '%s'" % save_path)
 
     x2s_dim = 800
     s2x_dim = 800

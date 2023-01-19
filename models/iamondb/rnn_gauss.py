@@ -1,3 +1,9 @@
+from __future__ import print_function
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.abspath(''),  '..', )))
+
 import ipdb
 import numpy as np
 import theano
@@ -23,7 +29,8 @@ from cle.cle.utils import init_tparams, sharedX
 from cle.cle.utils.compat import OrderedDict
 from cle.cle.utils.gpu_op import concatenate
 
-from nips2015_vrnn.datasets.iamondb import IAMOnDB
+# from nips2015_vrnn.datasets.iamondb import IAMOnDB
+from datasets.iamondb import IAMOnDB
 
 
 def main(args):
@@ -44,11 +51,11 @@ def main(args):
     lr = float(args['lr'])
     debug = int(args['debug'])
 
-    print "trial no. %d" % trial
-    print "batch size %d" % batch_size
-    print "learning rate %f" % lr
-    print "saving pkl file '%s'" % pkl_name
-    print "to the save path '%s'" % save_path
+    print("trial no. %d" % trial)
+    print("batch size %d" % batch_size)
+    print("learning rate %f" % lr)
+    print("saving pkl file '%s'" % pkl_name)
+    print("to the save path '%s'" % save_path)
 
     x2s_dim = 340
     s2x_dim = 340

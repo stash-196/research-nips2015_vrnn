@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import ipdb
 import os
 import numpy as np
@@ -88,7 +90,7 @@ class Blizzard(TemporalSeries, SequentialPrepMixin):
                     prev_mean = curr_mean
                     prev_var = curr_var
 
-                print "[%d / %d]" % (i+1, range_end)
+                print("[%d / %d]" % (i+1, range_end))
 
             save_file_name = self.file_name + '_normal.npz'
             self.X_mean = prev_mean
@@ -257,7 +259,7 @@ class Blizzard_tbptt(Blizzard):
                     prev_mean = curr_mean
                     prev_var = curr_var
 
-                print "[%d / %d]" % (i+1, range_end)
+                print("[%d / %d]" % (i+1, range_end))
 
             save_file_name = self.file_name + '_normal.npz'
             self.X_mean = prev_mean
