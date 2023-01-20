@@ -11,7 +11,8 @@ from cle.cle.data import TemporalSeries
 from cle.cle.data.prep import SequentialPrepMixin
 from cle.cle.utils import segment_axis, tolist, totuple
 
-from iamondb_utils import fetch_iamondb
+# from iamondb_utils import fetch_iamondb
+from datasets.iamondb_utils import fetch_iamondb
 
 
 class IAMOnDB(TemporalSeries, SequentialPrepMixin):

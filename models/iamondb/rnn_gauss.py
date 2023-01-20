@@ -1,8 +1,11 @@
 from __future__ import print_function
+
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-# sys.path.insert(0, os.path.abspath(os.path.join(os.path.abspath(''),  '..', )))
+
+FILE_DIR = os.path.dirname(__file__)
+ROOT_DIR = os.path.abspath(os.path.join(FILE_DIR, '..', '..'))
+sys.path.insert(0, ROOT_DIR)
 
 import ipdb
 import numpy as np
@@ -39,8 +42,8 @@ def main(args):
     pkl_name = 'rnn_gauss_%d' % trial
     channel_name = 'valid_nll'
 
-    data_path = args['data_path']
-    save_path = args['save_path']
+    data_path = os.path.join(ROOT_DIR, args['data_path'])
+    save_path = os.path.join(ROOT_DIR, args['save_path'])
 
     monitoring_freq = int(args['monitoring_freq'])
     epoch = int(args['epoch'])
@@ -260,7 +263,7 @@ if __name__ == "__main__":
     else:
         config_file_name = 'config.txt'
 
-    f = open(config_file_name, 'r')
+    f = open(os.path.join(FILE_DIR, config_file_name), 'r')
     lines = f.readlines()
     params = OrderedDict()
 

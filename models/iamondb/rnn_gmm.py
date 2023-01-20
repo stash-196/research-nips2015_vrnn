@@ -24,7 +24,7 @@ from cle.cle.utils import init_tparams, sharedX
 from cle.cle.utils.compat import OrderedDict
 from cle.cle.utils.gpu_op import concatenate
 
-from nips2015_vrnn.datasets.iamondb import IAMOnDB
+from datasets.iamondb import IAMOnDB
 
 
 def main(args):
