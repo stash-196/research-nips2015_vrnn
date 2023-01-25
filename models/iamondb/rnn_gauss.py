@@ -177,7 +177,7 @@ def main(args):
                                       sequences=[x_1_temp],
                                       outputs_info=[s_0])
 
-    for k, v in updates.iteritems():
+    for k, v in updates.items(): # iteritems -> items
         k.default_update = v
 
     s_temp = concatenate([s_0[None, :, :], s_temp[:-1]], axis=0)
