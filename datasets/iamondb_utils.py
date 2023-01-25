@@ -148,7 +148,7 @@ def fetch_iamondb(data_path):
 
             for n, (strokes_files, ascii_file) in enumerate(se):
                 if n % 100 == 0:
-                    print("Processing file %i of %i" % (n, len(se)))
+                    print("Processing file %i of %i" % (n, len(list(se)))) #list
                 with open(ascii_file) as fp:
                     cleaned = [t.strip() for t in fp.readlines()
                                if t != '\r\n'
